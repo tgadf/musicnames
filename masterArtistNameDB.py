@@ -52,13 +52,36 @@ class masterArtistNameDB:
         print("Saving {0} renamed artist keys to {1}".format(len(self.dbRenames), self.dbRenamesname))
         saveFile(idata=self.dbRenames, ifile=self.dbRenamesname, debug=True)
         
+        
+    def forceReloadNames(self, artistNameDB, save=False):
+        dbRenames = {}
+        for artistName,namesToBeFixed in artistNameDB.items():
+            for nameToBeFixed in namesToBeFixed:
+                dbRenames[nameToBeFixed] = artistName
+        print("  Forced reload of {0} artist names".format(len(dbRenames)))
+        print("  Found {0} renamed names".format(len(artistNameDB)))
+        self.checkForRecursives(artistNameDB)
+        
+        self.artistNameDB = artistNameDB
+        self.dbRenames    = dbRenames
+        if save is True:
+            print("Will save everything")
+            self.save()
+            self.loadRenames()
+            self.saveRenames()
+            
+            
     def forceReload(self, dbRenames, save=False):
+        self.forceReloadRenames(dbRenames, save)
+        
+    def forceReloadRenames(self, dbRenames, save=False):
         artistNameDB = {}
         for olderArtistName,fixedArtistName in dbRenames.items():
             if artistNameDB.get(fixedArtistName) is None:
                 artistNameDB[fixedArtistName] = []
             artistNameDB[fixedArtistName].append(olderArtistName)
         print("  Forced reload of {0} artist names".format(len(artistNameDB)))
+        print("  Found {0} names".format(len(dbRenames)))
         self.checkForRecursives()
         
         self.artistNameDB = artistNameDB
