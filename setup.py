@@ -27,7 +27,7 @@ class InstallWrapper(install):
     
 setup(
   name = 'musicnames',
-  py_modules = ['masterArtistNameDB'],
+  py_modules = ['masterArtistNameDB', 'masterArtistNameCorrection'],
   version = '0.0.1',
   data_files = [(os.path.join(sys.prefix, 'musicnames'), ['mainDBRenames.yaml'])],
   description = 'A Python Wrapper for Musicnames Data',
