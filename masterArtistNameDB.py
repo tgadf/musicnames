@@ -7,22 +7,27 @@ from searchUtils import findNearest
 
 class masterArtistNameDB:
     def __init__(self, source, debug=False, init=False):
-        print("="*25,"masterArtistNameDB","="*25)
+        self.debug = debug
+        if debug:
+            print("="*25,"masterArtistNameDB","="*25)
         self.debug  = debug
         self.source = source
         
         self.artistNameDBname      = join(prefix, 'musicnames', "{0}ArtistNameDB.p".format(source))
         self.dbRenamesname         = join(prefix, 'musicnames', "{0}DBRenames.yaml".format(source))
-        print("  Loading data from {0}".format(self.artistNameDBname))
+        if self.debug:
+            print("  Loading data from {0}".format(self.artistNameDBname))
         if isFile(self.artistNameDBname) and init == False:
             self.artistNameDB = getFile(self.artistNameDBname)
         else:
-            print("  Initializing a fresh DB for {0}".format(self.source))
+            if self.debug:
+                print("  Initializing a fresh DB for {0}".format(self.source))
             self.artistNameDB = {}
         self.checkForRecursives()
         self.loadRenames()
-        print("  There are currently {0} artist keys.".format(len(self.artistNameDB)))
-        print("  There are currently {0} renamed artist keys.".format(len(self.dbRenames)))
+        if self.debug:
+            print("  There are currently {0} artist keys.".format(len(self.artistNameDB)))
+            print("  There are currently {0} renamed artist keys.".format(len(self.dbRenames)))
 
         
     ##########################################################################################
