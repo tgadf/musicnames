@@ -1,3 +1,28 @@
+Abe Lyman:
+  '1014257':
+    ArtistName: Abe Lyman's California Orchestra
+    Ref: /us/artist/1014257
+  '11062082':
+    ArtistName: Abe Lyman & his Californians
+    Ref: /us/artist/11062082
+  '1241054':
+    ArtistName: Abe Lyman California Orchestra
+    Ref: /us/artist/1241054
+  '1260766':
+    ArtistName: Abe Lyman
+    Ref: /us/artist/1260766
+  '2575691':
+    ArtistName: Abe Lyman´s California Orchestra
+    Ref: /us/artist/2575691
+  '4182997':
+    ArtistName: Abe Lyman
+    Ref: /us/artist/4182997
+  '4554697':
+    ArtistName: Abe Lyman's Orchestra
+    Ref: /us/artist/4554697
+  '489548':
+    ArtistName: Abe Lyman
+    Ref: /us/artist/489548
 Academy of St. Martin in the Fields:
   '149358':
     Name: Academy of St. Martin in the Fields
@@ -35,6 +60,19 @@ Afrika Bambaataa:
   '453171':
     Name: Afrika Bambaataa & The Soulsonic Force
     Ref: /us/artist/453171
+Al Donahue:
+  '2605891':
+    ArtistName: Al Donahue
+    Ref: /us/artist/2605891
+  '4173570':
+    ArtistName: Al Donahue
+    Ref: /us/artist/4173570
+  '9181668':
+    ArtistName: Al Donahue
+    Ref: /us/artist/9181668
+  '9285964':
+    ArtistName: Al Donahue and His Society Orchestra
+    Ref: /us/artist/9285964
 Alan Moorhouse:
   '1242537':
     ArtistName: Alan Moorhouse Orchestra
@@ -502,6 +540,22 @@ Benny Goodman:
   '64893782':
     ArtistName: Benny Goodman and his Music Hall Orchestra
     Ref: /us/artist/64893782
+Benny Krueger:
+  '4155568':
+    ArtistName: Benny Krueger's Orchestra
+    Ref: /us/artist/4155568
+  '4173701':
+    ArtistName: Benny Krueger Orchestra
+    Ref: /us/artist/4173701
+  '4431045':
+    ArtistName: Benny Krueger
+    Ref: /us/artist/4431045
+  '5154734':
+    ArtistName: Benny Krueger
+    Ref: /us/artist/5154734
+  '6230000':
+    ArtistName: Benny Krueger S Orchestra
+    Ref: /us/artist/6230000
 Bernard Haitink:
   '13433771':
     ArtistName: Bernard Haitink, Edita Gruberova & Bavarian Radio Symphony Orchestra
@@ -592,6 +646,43 @@ Bert Kaempfert:
   '78373':
     Name: Bert Kaempfert And His Orchestra
     Ref: /us/artist/78373
+Bert Lown:
+  '12806411':
+    ArtistName: Bert Lown & His Biltmore Orchestra
+    Ref: /us/artist/12806411
+  '1312016':
+    ArtistName: Bert Lown & His Hotel Biltmore Orchestra
+    Ref: /us/artist/1312016
+  '279173':
+    ArtistName: Bert Lown
+    Ref: /us/artist/279173
+  '322794':
+    ArtistName: Bert Lown
+    Ref: /us/artist/322794
+  '4026914':
+    ArtistName: Bert Lown
+    Ref: /us/artist/4026914
+  '4055632':
+    ArtistName: Bert Lown & His Rhythm Boys
+    Ref: /us/artist/4055632
+  '4069365':
+    ArtistName: Bert Lown Und Sein Hotel Orchester Mit Frank Luther
+    Ref: /us/artist/4069365
+  '4161547':
+    ArtistName: Bert Lown and His Hotel Biltimore Orchestra
+    Ref: /us/artist/4161547
+  '490293':
+    ArtistName: Bert Lown & His Biltmore Hotel Orchestra
+    Ref: /us/artist/490293
+  '5296110':
+    ArtistName: Bert Lown Orchestra
+    Ref: /us/artist/5296110
+  '5354317':
+    ArtistName: Bert Lown & his Loungers
+    Ref: /us/artist/5354317
+  '57026332':
+    ArtistName: Bert Lown Biltmore Hotel Orchestra
+    Ref: /us/artist/57026332
 Big Bill Broonzy:
   '12773435':
     ArtistName: Big Bill Broonzy And His Rhythm Band
@@ -1960,6 +2051,31 @@ Enoch Light:
   '81213612':
     ArtistName: The Enoch Light Brigade
     Ref: /us/artist/81213612
+Enric Madriguera:
+  '274030':
+    ArtistName: Enric Madriguera Orchestra
+    Ref: /us/artist/274030
+  '295114':
+    ArtistName: Enric Madriguera
+    Ref: /us/artist/295114
+  '4130209':
+    ArtistName: Enric Madriguera
+    Ref: /us/artist/4130209
+  '4168893':
+    ArtistName: Enric Madriguera and His Hotel Weylin Orchestra
+    Ref: /us/artist/4168893
+  '4756290':
+    ArtistName: Orquesta Enric Madriguera
+    Ref: /us/artist/4756290
+  '4928509':
+    ArtistName: Enric Madriguera & His Hotel Weylin Orchestra
+    Ref: /us/artist/4928509
+  '508996':
+    ArtistName: Enric Madriguera
+    Ref: /us/artist/508996
+  '5631797':
+    ArtistName: Enric Madriguera et son orchestre
+    Ref: /us/artist/5631797
 Eric Burdon:
   '1196202':
     ArtistName: Eric Burdon and The Animals
@@ -2161,6 +2277,19 @@ Frank Black:
   '6450':
     Name: Frank Black and the Catholics
     Ref: /us/artist/6450
+Frank Ferera:
+  '4718817':
+    ArtistName: Frank Ferera
+    Ref: /us/artist/4718817
+  '5553626':
+    ArtistName: Frank Ferera'sTrio
+    Ref: /us/artist/5553626
+  '69393572':
+    ArtistName: Frank Ferera Hawaiians
+    Ref: /us/artist/69393572
+  '81848':
+    ArtistName: Frank Ferera
+    Ref: /us/artist/81848
 Frankie Lymon & The Teenagers:
   '210703':
     Name: Frankie Lymon & The Teenagers
@@ -2217,6 +2346,28 @@ Gary Lewis & The Playboys:
   '93331':
     Name: Gary Lewis & The Playboys
     Ref: /us/artist/93331
+Gene Rodemich:
+  '1309992':
+    ArtistName: Gene Rodemich
+    Ref: /us/artist/1309992
+  '3948861':
+    ArtistName: Gene Rodemich
+    Ref: /us/artist/3948861
+  '4199014':
+    ArtistName: The Gene Rodemich Orchestra
+    Ref: /us/artist/4199014
+  '4431798':
+    ArtistName: Gene Rodemich
+    Ref: /us/artist/4431798
+  '4710631':
+    ArtistName: Gene Rodemich Orchestra
+    Ref: /us/artist/4710631
+  '6229978':
+    ArtistName: Gene Rodemich S Orchestra
+    Ref: /us/artist/6229978
+  '6541271':
+    ArtistName: Al Jolson & Gene Rodemich Orchestra
+    Ref: /us/artist/6541271
 Gene Vincent:
   '100806':
     ArtistName: Gene Vincent And His Blue Caps
@@ -2341,6 +2492,28 @@ George Gruntz:
   '9868934':
     ArtistName: George Gruntz Dream Group
     Ref: /us/artist/9868934
+George Olsen:
+  '1014261':
+    ArtistName: George Olsen
+    Ref: /us/artist/1014261
+  '1222663':
+    ArtistName: George Olsen and His Music
+    Ref: /us/artist/1222663
+  '1229734':
+    ArtistName: George Olsen & His Music
+    Ref: /us/artist/1229734
+  '1412618':
+    ArtistName: George Olsen
+    Ref: /us/artist/1412618
+  '273672':
+    ArtistName: George Olsen
+    Ref: /us/artist/273672
+  '4792049':
+    ArtistName: George Olsen - His Music
+    Ref: /us/artist/4792049
+  '4860494':
+    ArtistName: George Olsen Orchestra
+    Ref: /us/artist/4860494
 George Thorogood:
   '113194':
     ArtistName: George Thorogood
@@ -2673,6 +2846,47 @@ J Roddy Walston & The Business:
   '5251658':
     Name: J. Roddy Walston & The Business
     Ref: /us/artist/5251658
+Jack Denny:
+  '4026911':
+    ArtistName: Jack Denny
+    Ref: /us/artist/4026911
+  '4330432':
+    ArtistName: Jack Denny
+    Ref: /us/artist/4330432
+  '4336930':
+    ArtistName: Jack Denny
+    Ref: /us/artist/4336930
+  '4928520':
+    ArtistName: Jack Denny & His Mount Royal Hotel Orchestra
+    Ref: /us/artist/4928520
+  '57152972':
+    ArtistName: Jack Denny Orchestra
+    Ref: /us/artist/57152972
+Jacques Renard:
+  '3267261':
+    ArtistName: Jacques Renard
+    Ref: /us/artist/3267261
+  '4948397':
+    ArtistName: Jacques Renard
+    Ref: /us/artist/4948397
+  '4948398':
+    ArtistName: Jacques Renard's Coconut Grove Orchestra
+    Ref: /us/artist/4948398
+  '55923082':
+    ArtistName: Jacques Renard
+    Ref: /us/artist/55923082
+  '6518491':
+    ArtistName: Jacques Renard and His Cocoanut Grove Orchestra
+    Ref: /us/artist/6518491
+  '75582442':
+    ArtistName: Jacques Renard Orchestra
+    Ref: /us/artist/75582442
+  '7644678':
+    ArtistName: Jacques Renard & His Cocoanut Grove Orchestra
+    Ref: /us/artist/7644678
+  '9595600':
+    ArtistName: Jacques Renard & his Coconut Grove Orchestra
+    Ref: /us/artist/9595600
 Jamie O'Neal:
   '14999127':
     Name: Jamie O’Neal
@@ -3021,6 +3235,19 @@ John Mellencamp:
   '5734':
     Name: John Mellencamp
     Ref: /us/artist/5734
+John Steel:
+  '168803':
+    ArtistName: John Steel
+    Ref: /us/artist/168803
+  '370455':
+    ArtistName: The John Steel Singers
+    Ref: /us/artist/370455
+  '4185628':
+    ArtistName: John Steele
+    Ref: /us/artist/4185628
+  '4484453':
+    ArtistName: John Steel feat. Elesha Moses
+    Ref: /us/artist/4484453
 Johnny Burnette:
   '1197247':
     ArtistName: Johnny Burnette Rock and Roll Trio
@@ -3068,6 +3295,55 @@ Johnny Guitar Watson:
   '83640':
     Name: Johnny Guitar Watson
     Ref: /us/artist/83640
+Johnny Hamp:
+  '1295486':
+    ArtistName: Johnny Hamp's Kentucky Serenade
+    Ref: /us/artist/1295486
+  '1310083':
+    ArtistName: Johnny Hamps' Kentucky Serenaders
+    Ref: /us/artist/1310083
+  '1312024':
+    ArtistName: Johnny Hamp
+    Ref: /us/artist/1312024
+  '1375677':
+    ArtistName: Johnny Hamp & His Kentucky Serenaders
+    Ref: /us/artist/1375677
+  '1379696':
+    ArtistName: Johnny Hamp's
+    Ref: /us/artist/1379696
+  '13929899':
+    ArtistName: Johnny Hamp & Kentucky Serenaders
+    Ref: /us/artist/13929899
+  '1461897':
+    ArtistName: Johnny Hamp s Kentucky Serenaders
+    Ref: /us/artist/1461897
+  '1609937':
+    ArtistName: Johnny Hamp's Kentucky Serenaders
+    Ref: /us/artist/1609937
+  '2562201':
+    ArtistName: Johnny Hamp´s Kentucky Serenaders
+    Ref: /us/artist/2562201
+  '3793301':
+    ArtistName: Johnny Hamp's Kentucky Serenades
+    Ref: /us/artist/3793301
+  '4053357':
+    ArtistName: Johnny Hamp
+    Ref: /us/artist/4053357
+  '5352117':
+    ArtistName: Johnny Hamp's Kenutcky Serenaders
+    Ref: /us/artist/5352117
+  '5460985':
+    ArtistName: Johnny Hamp's Kentucky Seranaders
+    Ref: /us/artist/5460985
+  '56304112':
+    ArtistName: Johnny Hamp's Kentucky Serenader
+    Ref: /us/artist/56304112
+  '7371450':
+    ArtistName: Johnny Hamp's Kentucky Serenaders and Franklin Baur
+    Ref: /us/artist/7371450
+  '82660':
+    ArtistName: Johnny Hamp's Kentucky Serenaders
+    Ref: /us/artist/82660
 Johnny Long:
   '1261319':
     ArtistName: Johnny Long
@@ -3584,6 +3860,31 @@ Malmö Symphony Orchestra:
   '4787924':
     Name: Malmö Symfoniorkester
     Ref: /us/artist/4787924
+Mamie Smith:
+  '109374':
+    ArtistName: Mamie Smith
+    Ref: /us/artist/109374
+  '1225562':
+    ArtistName: Mamie Smith And Her Jazz Hounds
+    Ref: /us/artist/1225562
+  '1292863':
+    ArtistName: Mamie Smith & Her Jazz Band
+    Ref: /us/artist/1292863
+  '1292867':
+    ArtistName: Mamie Smith And Her Jazz Hounds
+    Ref: /us/artist/1292867
+  '1400612':
+    ArtistName: Mamie Smith & The Harlem Trio
+    Ref: /us/artist/1400612
+  '166929':
+    ArtistName: Mamie Smith & Her Jazz Hounds
+    Ref: /us/artist/166929
+  '4926487':
+    ArtistName: Mamie Smith And Her Jazz Hounds
+    Ref: /us/artist/4926487
+  '78205242':
+    ArtistName: Dr. Mamie Smith
+    Ref: /us/artist/78205242
 Manfred Mann:
   '10423504':
     ArtistName: Manfred Mann Chapter Three
@@ -4151,6 +4452,22 @@ Pat Travers:
   '5619762':
     ArtistName: The Pat Travers Band
     Ref: /us/artist/5619762
+Paul Biese:
+  '1225553':
+    ArtistName: Paul Biese & His Novelty Orchestra
+    Ref: /us/artist/1225553
+  '1238593':
+    ArtistName: Paul Biese and His Orchestra
+    Ref: /us/artist/1238593
+  '1341287':
+    ArtistName: The Paul Biese Trio
+    Ref: /us/artist/1341287
+  '3393431':
+    ArtistName: Paul Biese
+    Ref: /us/artist/3393431
+  '4733864':
+    ArtistName: Paul Biese Orchestra
+    Ref: /us/artist/4733864
 Paul Mauriat:
   '134171':
     Name: Paul Mauriat And His Orchestra
@@ -4437,6 +4754,31 @@ Richard Hell:
   '64424':
     ArtistName: Richard Hell
     Ref: /us/artist/64424
+Richard Himber:
+  '1009156':
+    ArtistName: Richard Himber & His Ritz-Carlton Orchestra
+    Ref: /us/artist/1009156
+  '1207784':
+    ArtistName: Richard Himber
+    Ref: /us/artist/1207784
+  '1285409':
+    ArtistName: Richard Himber
+    Ref: /us/artist/1285409
+  '1667292':
+    ArtistName: Richard Himber
+    Ref: /us/artist/1667292
+  '2384001':
+    ArtistName: Richard Himber And His Rhythmic Pyramids
+    Ref: /us/artist/2384001
+  '4052804':
+    ArtistName: Richard Himber Orchestra
+    Ref: /us/artist/4052804
+  '51821432':
+    ArtistName: Richard Himber & Hotel Ritz Carlton Orchestra
+    Ref: /us/artist/51821432
+  '5850651':
+    ArtistName: Richard Himber's Ritz-Carlton Orchestra
+    Ref: /us/artist/5850651
 Ringo Starr:
   '4270359':
     ArtistName: Karaoke - Ringo Starr
@@ -4932,6 +5274,44 @@ T. G. Sheppard:
   '183723':
     Name: T.G. Sheppard
     Ref: /us/artist/183723
+Ted Daffan:
+  '1372575':
+    ArtistName: Ted Daffans Texans
+    Ref: /us/artist/1372575
+  '1395722':
+    ArtistName: Ted Daffan
+    Ref: /us/artist/1395722
+  '147511':
+    ArtistName: Ted Daffan
+    Ref: /us/artist/147511
+  '273563':
+    ArtistName: Ted Daffan And His Texans
+    Ref: /us/artist/273563
+  '303769':
+    ArtistName: Ted Daffan
+    Ref: /us/artist/303769
+  '453615':
+    ArtistName: Ted Daffan & His Texans
+    Ref: /us/artist/453615
+  '5899014':
+    ArtistName: Ted Daffan's Texan's
+    Ref: /us/artist/5899014
+Ted Fio Rito:
+  '1102586':
+    ArtistName: Ted Fio Rito
+    Ref: /us/artist/1102586
+  '1608049':
+    ArtistName: Ted Fio Rito Orchestra
+    Ref: /us/artist/1608049
+  '2575441':
+    ArtistName: Ted Fio Rito
+    Ref: /us/artist/2575441
+  '4032527':
+    ArtistName: Ted Fio Rito
+    Ref: /us/artist/4032527
+  '4161545':
+    ArtistName: Ted Fio Rito and His Hotel St Francis Orchestra
+    Ref: /us/artist/4161545
 Ted Heath:
   '1034054':
     ArtistName: The Ted Heath Orchestra
@@ -5311,6 +5691,13 @@ Tommy James:
   '66957':
     Name: Tommy James
     Ref: /us/artist/66957
+Tompall Glaser:
+  '4174122':
+    ArtistName: Tompall Glaser
+    Ref: /us/artist/4174122
+  '447459':
+    ArtistName: Tompall Glaser And Band
+    Ref: /us/artist/447459
 Toshiko Akiyoshi:
   '1081573':
     ArtistName: Toshiko Akiyoshi Trio

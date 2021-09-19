@@ -1,3 +1,13 @@
+Abe Lyman:
+  0000586106:
+    ArtistName: Abe Lyman & His Californians
+    Ref: /artist/abe-lyman-his-californians-mn0000586106/discography
+  0000588065:
+    ArtistName: Abe Lyman
+    Ref: /artist/abe-lyman-mn0000588065/discography
+  '0000721040':
+    ArtistName: Abe Lyman & His California Orchestra
+    Ref: /artist/abe-lyman-his-california-orchestra-mn0000721040
 Afrika Bambaataa:
   0000503781:
     ArtistName: Afrika Bambaataa and Family
@@ -281,6 +291,19 @@ Bert Ambrose:
   0002548671:
     ArtistName: Bert Ambrose
     Ref: /artist/ambrose-his-orchestra-mn0002548671/discography
+Bert Lown:
+  '0000050223':
+    ArtistName: Bert Lown & His Hotel Biltmore Orchestra
+    Ref: /artist/bert-lown-his-hotel-biltmore-orchestra-mn0000050223/discography
+  0000641386:
+    ArtistName: Bert Lown
+    Ref: /artist/bert-lown-mn0000641386/discography
+  0001417914:
+    ArtistName: Bert Lown & His Biltmore Hotel Orchestra
+    Ref: /artist/bert-lown-his-biltmore-hotel-orchestra-mn0001417914/credits
+  0001806443:
+    ArtistName: Bert Lown
+    Ref: /artist/bert-lown-his-orchestra-mn0001806443/credits
 Big Bill Broonzy:
   0000757873:
     ArtistName: Big Bill Broonzy
@@ -1290,6 +1313,13 @@ Frank Black:
   0000189621:
     Name: Frank Black and the Catholics
     Ref: /artist/frank-black-and-the-catholics-mn0000189621/discography
+Frank Ferera:
+  0001335579:
+    ArtistName: Frank Ferera & His Hawaiian Trio
+    Ref: /artist/frank-ferera-his-hawaiian-trio-mn0001335579/credits
+  0003144085:
+    ArtistName: Frank Ferera
+    Ref: /artist/palakiko-ferreira-mn0003144085/credits
 Frankie Yankovic:
   0000140963:
     Name: Frankie Yankovic
@@ -1338,6 +1368,13 @@ Gary Lewis:
   0000988446:
     ArtistName: Gary Lewis
     Ref: /artist/gary-lewis-mn0000988446/discography
+Gene Rodemich:
+  0000198756:
+    ArtistName: Gene Rodemich
+    Ref: /artist/gene-rodemich-mn0000198756/discography
+  0001593503:
+    ArtistName: Gene Rodemich
+    Ref: /artist/gene-rodemich-and-his-orchestra-mn0001593503/credits
 Gene Vincent:
   0000199766:
     ArtistName: Gene Vincent
@@ -1394,6 +1431,13 @@ George Gruntz:
   0000594888:
     ArtistName: George Gruntz Concert Jazz Band
     Ref: /artist/george-gruntz-concert-jazz-band-mn0000594888/discography
+George Olsen:
+  0000537841:
+    ArtistName: George Olsen
+    Ref: /artist/george-olsen-his-orchestra-mn0000537841/discography
+  0000947088:
+    ArtistName: George Olsen
+    Ref: /artist/george-olsen-mn0000947088/discography
 George Thorogood:
   0000647834:
     ArtistName: George Thorogood
@@ -2011,6 +2055,16 @@ John Mellencamp:
   0000809039:
     Name: John Cougar Mellencamp
     Ref: /artist/john-cougar-mellencamp-mn0000809039/discography
+John Steel:
+  0000227782:
+    ArtistName: John Steel
+    Ref: /artist/john-steel-mn0000227782/discography
+  0000250697:
+    ArtistName: John Steele Ritter
+    Ref: /artist/john-steele-ritter-mn0000250697/discography
+  '0002123316':
+    ArtistName: The John Steel Singers
+    Ref: /artist/the-john-steel-singers-mn0002123316/discography
 John Verity:
   0000813377:
     ArtistName: John Verity
@@ -2038,6 +2092,19 @@ Johnny Burnette:
   0001817659:
     Name: Dorsey & Johnny Burnette
     Ref: /artist/dorsey-johnny-burnette-mn0001817659/credits
+Johnny Hamp:
+  '0000215203':
+    ArtistName: Johnny Hamps & His Kentucky Serenaders
+    Ref: /artist/johnny-hamps-his-kentucky-serenaders-mn0000215203/credits
+  '0000256411':
+    ArtistName: Johnny Hamp's Kentucky Serenaders
+    Ref: /artist/johnny-hamps-kentucky-serenaders-mn0000256411/credits
+  0000821454:
+    ArtistName: Johnny Hamp & His Kentucky Serenaders
+    Ref: /artist/johnny-hamp-his-kentucky-serenaders-mn0000821454/credits
+  0001348529:
+    ArtistName: Johnny Hamp
+    Ref: /artist/johnny-hamp-mn0001348529/discography
 Johnny Hodges:
   '0000526407':
     Name: Johnny Hodges
@@ -2362,6 +2429,16 @@ Machito:
   0001248816:
     ArtistName: Machito & His Famous Orchestra
     Ref: /artist/machito-his-famous-orchestra-mn0001248816/discography
+Mamie Smith:
+  0000669884:
+    ArtistName: Mamie Smith & Her Jazz Hounds
+    Ref: /artist/mamie-smith-her-jazz-hounds-mn0000669884/discography
+  '0000671455':
+    ArtistName: Mamie Smith
+    Ref: /artist/mamie-smith-mn0000671455/discography
+  0000672196:
+    ArtistName: Mamie Smith & Her Jazz Band
+    Ref: /artist/mamie-smith-her-jazz-band-mn0000672196/credits
 Manfred Mann:
   '0000674600':
     ArtistName: Manfred Mann's Earth Band
@@ -2674,6 +2751,19 @@ Patti LaBelle:
   0000118289:
     Name: Labelle
     Ref: /artist/labelle-mn0000118289/discography
+Paul Biese:
+  0000014492:
+    ArtistName: Paul Biese
+    Ref: /artist/paul-biese-mn0000014492/credits
+  '0000113425':
+    ArtistName: The Paul Biese Trio
+    Ref: /artist/paul-biese-trio-mn0000113425/credits
+  0001834600:
+    ArtistName: Paul Biese & His Edgewater Beach Orchestra
+    Ref: /artist/paul-biese-his-edgewater-beach-orchestra-mn0001834600/credits
+  0001853115:
+    ArtistName: Paul Biese Orchestra
+    Ref: /artist/paul-biese-orchestra-mn0001853115/credits
 Paul Weston:
   0000029609:
     Name: Paul Weston
@@ -2860,6 +2950,16 @@ Richard Hell:
   0000848913:
     ArtistName: Richard Hell
     Ref: /artist/richard-hell-mn0000848913/discography
+Richard Himber:
+  0000343809:
+    ArtistName: Richard Himber
+    Ref: /artist/richard-himber-mn0000343809/discography
+  0002288133:
+    ArtistName: Richard Himber
+    Ref: /artist/richard-himber-his-orchestra-mn0002288133/discography
+  '0003031114':
+    ArtistName: Richard Himber Orchestra
+    Ref: /artist/richard-himber-orchestra-mn0003031114/discography
 Ringo Starr:
   0000081776:
     ArtistName: Ringo Starr
@@ -3223,6 +3323,23 @@ Sérgio Mendes:
   '0000005056':
     ArtistName: Sérgio Mendes & Brasil '66
     Ref: /artist/sergio-mendes-brasil-66-mn0000005056/discography
+Ted Daffan:
+  0000028755:
+    ArtistName: Ted Daffan & His Texans
+    Ref: /artist/ted-daffan-his-texans-mn0000028755/credits
+  0000196351:
+    ArtistName: Ted Daffan
+    Ref: /artist/ted-daffan-mn0000196351/discography
+  0001361952:
+    ArtistName: Ted Daffan
+    Ref: /artist/ted-daffans-texans-mn0001361952/credits
+Ted Fio Rito:
+  '0000027147':
+    ArtistName: Ted Fio Rito
+    Ref: /artist/ted-fio-rito-his-orchestra-mn0000027147/credits
+  0000029178:
+    ArtistName: Ted Fio Rito
+    Ref: /artist/ted-fio-rito-mn0000029178/discography
 Ted Heath:
   0000023906:
     ArtistName: Ted Heath
@@ -3369,6 +3486,13 @@ Tommy James:
   0000620386:
     Name: Tommy James
     Ref: /artist/tommy-james-mn0000620386/discography
+Tompall Glaser:
+  0000618222:
+    ArtistName: Tompall Glaser & Band
+    Ref: /artist/tompall-glaser-band-mn0000618222/credits
+  0000621187:
+    ArtistName: Tompall Glaser
+    Ref: /artist/tompall-glaser-mn0000621187/discography
 Too $hort:
   '0001052511':
     Name: Too $hort

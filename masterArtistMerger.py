@@ -4,6 +4,7 @@ from os.path import join
 from searchUtils import findNearest
 from fsUtils import isDir, isFile, setFile
 from ioUtils import getFile, saveFile
+from listUtils import getFlatList
 from timeUtils import timestat
 
 class masterArtistMerger:

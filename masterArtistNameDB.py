@@ -59,6 +59,7 @@ class masterArtistNameDB:
         
         
     def forceReloadNames(self, artistNameDB, save=False):
+        print("Forcing Reload Using {0} Rename Names".format(len(artistNameDB)))
         dbRenames = {}
         for artistName,namesToBeFixed in artistNameDB.items():
             for nameToBeFixed in namesToBeFixed:
@@ -80,6 +81,7 @@ class masterArtistNameDB:
         self.forceReloadRenames(dbRenames, save)
         
     def forceReloadRenames(self, dbRenames, save=False):
+        print("Forcing Reload Using {0} Rename Entries".format(len(dbRenames)))
         artistNameDB = {}
         for olderArtistName,fixedArtistName in dbRenames.items():
             if artistNameDB.get(fixedArtistName) is None:
