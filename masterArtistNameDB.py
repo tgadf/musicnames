@@ -120,9 +120,16 @@ class masterArtistNameDB:
     def createRenamesFromDB(self, mdbmap, dbRenames):
         artistNameDB = {x[0]: [] for x in mdbmap.getArtists()}
 
+        errs = []
         for olderArtistName,fixedArtistName in dbRenames.items():
             if artistNameDB.get(olderArtistName) is not None:
-                raise ValueError("Can not add recursive definition! Key [{0}] and Value [{1}]".format(artistNameDB.get(olderArtistName),olderArtistName))
+                errs.append("Recursive definition! Key [{0}] and Value [{1}]".format(artistNameDB.get(olderArtistName),olderArtistName))
+        if len(errs) > 0:
+            print("Found The Following Recursive Errors:")
+            for i,err in enumerate(errs):
+                print(i,'\t',err)
+            raise ValueError("Need To Fix Recursive Errors")
+            
 
         for olderArtistName,fixedArtistName in dbRenames.items():
             if artistNameDB.get(fixedArtistName) is None:
@@ -152,10 +159,17 @@ class masterArtistNameDB:
     
     def addRenames(self, dbRenames):
         print("Trying to add {0} renamed artist keys".format(len(dbRenames)))
+        errs = []
         for olderArtistName,fixedArtistName in dbRenames.items():
             if self.artistNameDB.get(olderArtistName) is not None:
-                raise ValueError("Can not add recursive definition! Key [{0}] and Value [{1}]".format(self.artistNameDB.get(olderArtistName),olderArtistName))
-                
+                errs.append("Recursive definition! Key [{0}] and Value [{1}]".format(self.artistNameDB.get(olderArtistName),olderArtistName))
+
+        if len(errs) > 0:
+            print("Found The Following Recursive Errors:")
+            for i,err in enumerate(errs):
+                print(i,'\t',err)
+            raise ValueError("Need To Fix Recursive Errors")
+            
         print("There are currently {0} artist keys.".format(len(self.artistNameDB)))
         print("There are currently {0} renamed artist keys.".format(len(self.dbRenames)))
         for olderArtistName,fixedArtistName in dbRenames.items():
@@ -171,7 +185,14 @@ class masterArtistNameDB:
     def checkForRecursives(self, artistNameDB=None):
         if artistNameDB is None:
             artistNameDB = self.artistNameDB
+        errs = []
         for artistName,namesToBeFixed in artistNameDB.items():
             for nameToBeFixed in namesToBeFixed:
                 if self.artistNameDB.get(nameToBeFixed) is not None:
-                    raise ValueError("Recursive found! Key [{0}] and Values [{1},{2}]".format(artistName,nameToBeFixed,self.artistNameDB.get(nameToBeFixed)))
+                    errs.append("Recursive found! Key [{0}] and Values [{1},{2}]".format(artistName,nameToBeFixed,self.artistNameDB.get(nameToBeFixed)))
+                    
+        if len(errs) > 0:
+            print("Found The Following Recursive Errors:")
+            for i,err in enumerate(errs):
+                print(i,'\t',err)
+            raise ValueError("Need To Fix Recursive Errors")
