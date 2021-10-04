@@ -1,177 +1,263 @@
 from sys import prefix
-from os import getcwd
-from os.path import join
-from searchUtils import findNearest
-from fsUtils import isDir, isFile, setFile
+from uuid import uuid4
+from fsUtils import isDir, isFile, setFile, setDir
 from ioUtils import getFile, saveFile
 from listUtils import getFlatList
 from timeUtils import timestat
+from masterDBGate import musicDBs
+from pandas import Series, DataFrame
+
+
+class mergerExpo:
+    def __init__(self, debug=False):
+              
+        self.mDBs = musicDBs()
+        self.dbDiscs = self.mDBs.getDiscs()
+        self.expo = {"Discogs": 10, "AllMusic": 10, "MusicBrainz": 42, "LastFM": 14, "RateYourMusic": 10, 
+                    "Deezer": 12, "AlbumOfTheYear": 9, "Genius": 11, "KWorbSpotify": 15, "KWorbiTunes": 15}
+    
+    
+    def getExpo(self):
+        return self.expo
+    
+        
+    def findMergerPrefixExpo(self, init=False):
+        if init is False:
+            return 
+        
+        ts = timestat("Finding Merger Prefix")
+        
+        basename = "IDToName"
+        maxIDs   = {}
+        saveVal  = {}
+        for db,dbDisc in self.dbDiscs.items():
+            savename = setFile(dbDisc.getDiscogDBDir(), "Artist{0}PreMerge.p".format(basename))
+            maxIDs[db] = max([int(x) for x in getFile(savename).index if x is not None])
+
+        for db,maxID in maxIDs.items():
+            exp = int(ceil(log10(maxID)))
+            print("{0: <15}{1: >45}{2: >4}".format(db,maxID,exp))
+            preMaxID = int(pow(10,exp+3))+maxID
+            print("{0: <15}{1: >45}{2: >4}".format("",preMaxID,exp))
+            saveVal[db] = exp+3
+            
+        ts.stop()
+        
+        from json import dumps
+        print(dumps(saveVal))
+        
+        return saveVal
+    
 
 class masterArtistMerger:
     def __init__(self, debug=False):
         self.debug   = debug
         self.mergers = {}
+        print("{0} masterArtistMerger {1}".format("="*25,"="*25))
         
-        self.DBIDtoArtistName = {}
-        self.DBIDtoNewID      = {}
-                
-        self.mergerDir = join(prefix, 'musicnames', 'mergers')
-        if not isDir(self.mergerDir):
-            raise ValueError("There is no master merger directory [{0}]".format(self.mergerDir))
-            
-        self.dbs = ["MusicBrainz", "AllMusic", "Discogs", "Deezer", "Genius", "AlbumOfTheYear", "LastFM",
-                    "RateYourMusic", "KWorbSpotify", "KWorbiTunes"]
-        ts = timestat("Loading Merged Artist Data")
-        self.setArtistMergers()
-        ts.stop()
-            
-      
-    ########################################################################################################################
-    #
-    #
-    # Multi-Artist Information
-    #
-    #
-    ########################################################################################################################
-    def getNewID(self, db, IDstoMerge):
-        if len(IDstoMerge) == 0:
-            raise ValueError("IDs to Merge is 0 for DB [{0}]".format(db))
+        self.mDBs = musicDBs()
+
+        self.musicNamesDir = setDir(prefix, 'musicnames')
+        if not isDir(self.musicNamesDir):
+            raise ValueError("There is no master music names directory [{0}]".format(self.musicNamesDir))
         
-        if db == "MusicBrainz":
-            newID  =  int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += int(1e41)
-            newID  = str(int(newID))
-        elif db == "Discogs":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e11
-            newID  = str(int(newID))
-        elif db == "AllMusic":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e11
-            newID  = str(int(newID))
-        elif db == "Deezer":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e11
-            newID  = str(int(newID))
-        elif db == "LastFM":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e14
-            newID  = str(int(newID))
-        elif db == "Genius":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e11
-            newID  = str(int(newID))
-        elif db == "AlbumOfTheYear":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e11
-            newID  = str(int(newID))
-        elif db == "RateYourMusic":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e11
-            newID  = str(int(newID))
-        elif db == "KWorbSpotify":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e14
-            newID  = str(int(newID))
-        elif db == "KWorbiTunes":
-            newID  = int(sum([int(artistID) for artistID in IDstoMerge])/len(IDstoMerge))
-            newID += 1e14
-            newID  = str(int(newID))
+        mExpo = mergerExpo()
+        self.prefixExpo = mExpo.getExpo()
+        
+        self.manualMergers = self.getData(fast=True, local=False)
+        self.setMergerMapping()
+        self.summary()
+        
+            
+    def summary(self, manualMergers=None):
+        manualMergers = self.manualMergers if manualMergers is None else manualMergers
+        print("masterArtistMerger Summary:")
+        print("  DB ID Entries: {0}".format(len(self.dbIDTomIDMapping)))
+        print("  DB Entries:    {0}".format(len(self.mIDMapping)))
+        print("  Artists:       {0}".format(len(self.manualMergers)))
+
+            
+    #########################################################################################################
+    #
+    # Lookup Maps
+    #
+    #########################################################################################################    
+    def setMergerMapping(self):
+        ## For Getting All Mergers By DB
+        dbMappingDF = self.manualMergers.apply(Series)
+        dbMapping   = {db: dbMappingDF[db] for db in self.mDBs.getDBs()}
+        dbMapping   = {db: dbData[dbData.notna()] for db,dbData in dbMapping.items()}
+        self.dbMapping = dbMapping
+        
+
+        ## For Getting All Mergers By Merger ID
+        mIDMapping = {}
+        for artistName,artistData in self.manualMergers.iteritems():
+            for db,dbData in artistData.items():
+                mID   = dbData["ID"]
+                mData = dbData["MergeData"]
+                if mIDMapping.get(mID) is not None:
+                    raise ValueError("There are multiple merge IDs [{0}]".format(mID))
+                mIDMapping[mID] = {"ArtistName": artistName, "DB": db, "MergeData": mData}
+        self.mIDMapping = mIDMapping
+        
+        
+        ## For Getting Merger ID By DB+DBID
+        dbIDTomIDMapping = {}
+        for artistName,artistData in self.manualMergers.iteritems():
+            for db,dbData in artistData.items():
+                mID   = dbData["ID"]
+                mData = dbData["MergeData"]
+                for dbID,dbIDData in mData.items():
+                    key = tuple([db,dbID])
+                    if dbIDTomIDMapping.get(key) is not None:
+                        print("DB ({0} ID [{1}] is matched for multiple merger IDs ({2})".format(db,dbID,artistName))
+                        print({"ArtistName": artistName, "DB": db, "MergeID": mID})
+                        print(dbIDTomIDMapping[key])
+                    dbIDTomIDMapping[key] = {"ArtistName": artistName, "MergeID": mID}
+        self.dbIDTomIDMapping = dbIDTomIDMapping
+
+            
+    #########################################################################################################
+    #
+    # Merger ID Generation
+    #
+    #########################################################################################################    
+    def genMergerID(self, db):
+        uint = uuid4().int
+        expo = self.prefixExpo.get(db)
+        if expo is None:
+            raise ValueError("DB [{0}] does not have an exponent in the master artist merger data")
+        mID = int(str(uint)[-(expo-3):]) + int(pow(10,expo))
+        mID = str(mID)
+        if self.debug:
+            print(db,' \t',expo,'\t',len(str(uint)),'\t',uint,'\t',mID)
+        return mID
+
+            
+    #########################################################################################################
+    #
+    # I/O
+    #
+    #########################################################################################################
+    def getFilename(self, fast, local):
+        basename="manualMergers"
+            
+        self.localpfname = "{0}.p".format(basename)
+        self.localyfname = "{0}.yaml".format(basename)
+        self.pfname = setFile(self.musicNamesDir, self.localpfname)
+        self.yfname = setFile(self.musicNamesDir, self.localyfname)
+        
+        if fast is True:
+            if local is True:
+                return self.localpfname
+            else:
+                return self.pfname
         else:
-            raise ValueError("NewID not defined for db {0}".format(db))
+            if local is True:
+                return self.localyfname
+            else:
+                return self.yfname
             
-        return newID
-    
-    
-    def getMergers(self):
-        return self.mergers
+        raise ValueError("Somehow didn't get a filename!")
 
-    
-    def getMergersByDB(self, db):
-        if self.mergers.get(db) is None:
-            return []
-        return self.mergers[db]
+    def getData(self, fast=True, local=False):
+        ftype = {True: "Pickle", False: "YAML"}
+        ltype = {True: "Local", False: "Main"}
+        ts = timestat("Getting Manual Mergers Data From {0} {1} File".format(ltype[local], ftype[fast]))
+        fname = self.getFilename(fast, local)
+        manualMergers = getFile(fname)
 
-    
-    def getMergersIDToNameByDB(self, db):
-        if self.DBIDtoArtistName.get(db) is None:
-            return {}
-        return self.DBIDtoArtistName[db]
-    
-
-    def getAllNewIDs(self):
-        newIDs = getFlatList([list(x.keys()) for db,x in self.DBIDtoArtistName.items()])
-        return newIDs
-        
-    def getAllMergedIDs(self):
-        allIDs = getFlatList([getFlatList(list(x)) for db,x in self.DBIDtoNewID.items()])
-        return allIDs
-
-    
-
-    def setArtistMergers(self):
-        for db in self.dbs:
-            self.DBIDtoArtistName[db] = {}
-            self.DBIDtoNewID[db]      = {}
-            IDsToMerge                = []
-            
-            dbMergerData = self.getDBMergerData(db)
-            for artistName, values in dbMergerData.items():
-                IDs = list(values.keys())
-                IDsToMerge.append(IDs)
-
-                newID = self.getNewID(db, IDs)
-                self.DBIDtoNewID[db][tuple(sorted(IDs))] = newID
-                self.DBIDtoArtistName[db][newID] = artistName
-
-            self.mergers[db] = IDsToMerge   
-            
-            
-            
-    ########################################################################################################################
-    #
-    #
-    # IO and Updates Information
-    #
-    #
-    ########################################################################################################################
-    def getDBMergerData(self, db):
-        mergerFile = self.getDBMergerFilename(db)
-        if not isFile(mergerFile):
-            raise ValueError("Could not find mergerFile [{0}]".format(mergerFile))
-        dbMergerData = getFile(mergerFile)
-        return dbMergerData
-    
-        
-    def getDBMergerFilename(self, db, local=False):
-        if local is True:
-            mergerFile   = setFile("mergers", "merge{0}.yaml".format(db))
-        else:
-            mergerFile   = setFile(self.mergerDir, "merge{0}.yaml".format(db))
-        return mergerFile
-    
-    
-    def saveDBMergerData(self, db, mergerData, local=False):
-        filename = self.getDBMergerFilename(db, local=local)
-        ts = timestat("Saving {0} merged artists for {1} DB to {2}".format(len(mergerData), db, filename))
-        saveFile(idata=mergerData, ifile=filename)
         ts.stop()
     
-    
-    def updateMergedData(db, updateData):
-        mergeData = self.getDBMergerData(db)
-        nOverlap  = set(mergeData.keys()).intersection(set(updateData.keys()))
+        return manualMergers
 
-        if len(nOverlap) == 0:
-            print("No Overlap!!")
-            print("Before: {0}".format(len(mergeData)))
-            print("Update: {0}".format(len(updateData)))
+    def writeToLocalYamlFromMainPickle(self):
+        ts = timestat("Writing To Local YAML From Main Pickle")
+        manualMergers = self.getData(fast=True, local=False)
+        self.saveData(manualMergers, fast=False, local=True)
+        ts.stop()
+
+    def writeToMainPickleFromLocalYAML(self):
+        ts = timestat("Writing To Main Pickle From Local YAML")
+        manualMergers = self.getData(fast=False, local=True)
+        self.saveData(manualMergers, fast=True, local=False)
+        ts.stop()
+        
+    def saveData(self, manualMergers=None, fast=True, local=False):
+        ftype = {True: "Pickle", False: "YAML"}
+        ltype = {True: "Local", False: "Main"}
+        ts = timestat("Saving Manual Mergers Data To {0} {1} File".format(ltype[local], ftype[fast]))
+        manualMergers = self.manualMergers if manualMergers is None else manualMergers
+        #self.summary(manualMergers)
+        
+        fname = self.getFilename(fast, local)
+        if fast:
+            toSave = Series(manualMergers) if isinstance(manualMergers, dict) else manualMergers
+            toSave = toSave.sort_index()
         else:
-            print("Found {0} Overlapping Artists".format(nOverlap))
+            toSave = manualMergers.sort_index().to_dict() if isinstance(manualMergers, Series) else manualMergers
+        saveFile(idata=toSave, ifile=fname)
+        
+        ts.stop()
 
-        if len(nOverlap) == 0:
-            print("Before: {0}".format(len(mergeData)))
-            mergeData.update(updateData)
-            print("After:  {0}".format(len(mergeData)))
-            self.saveDBMergerData(db=db, mergerData=mergeData, local=True)
-            #saveFile(idata=mergeData, ifile="mergers/merge{0}.yaml".format(db), debug=True)
+            
+    #########################################################################################################
+    #
+    # Getter Functions
+    #
+    #########################################################################################################
+    def getArtistDataByName(self, artistName):
+        return self.manualMergers[artistName] if self.manualMergers.__contains__(artistName) else None
+    
+    def getArtistDBDataByName(self, artistName, db):
+        artistData = self.getArtistDataByName(artistName)
+        return artistData.get(db) if isinstance(artistData,dict) else None
+    
+    def getMergerDataByDB(self, db):
+        return self.dbMapping[db] if self.dbMapping.get(db) is not None else None
+    
+    def getArtistDataByMergerID(self, mID):
+        return self.mIDMapping[mID] if self.mIDMapping.get(mID) is not None else None
+    
+    def getMergerIDByDBID(self, db, dbID):
+        key = tuple([db,dbID])
+        return self.dbIDTomIDMapping[key] if self.dbIDTomIDMapping.get(key) is not None else None
+
+            
+    #########################################################################################################
+    #
+    # Merge/Update Data
+    #
+    #########################################################################################################
+    def mergeDict(self, dict1, dict2):
+        return {**dict1, **dict2}
+
+    def merge(self, newData, save=True, debug=True):
+        for artistName,artistData in newData.items():
+            print("Merging {0}".format(artistName))
+            artistMergeData = self.getArtistDataByName(artistName)
+            if artistMergeData is None:
+                if debug:
+                    print("  Adding New Artist [{0}] To Data".format(artistName))
+                    for db,dbData in artistData.items():
+                        print("    Adding New DB [{0}] With [{1}] IDs To Artist Data [{2}]".format(db,len(dbData),artistName))
+                newMergeData = {db: {"ID": self.genMergerID(db), "MergeData": dbData} for db,dbData in artistData.items()}
+            else:
+                newMergeData = artistMergeData
+                for db,dbData in artistData.items():
+                    if newMergeData.get(db) is None:
+                        if debug:
+                            print("  Adding New DB [{0}] With [{1}] IDs To Artist Data [{2}]".format(db,len(dbData),artistName))
+                        newMergeData[db] = {"ID": self.genMergerID(db), "MergeData": dbData}
+                    else:
+                        if debug:
+                            print("  Adding New DB IDs [{0}] To Existing [{1}] IDs To Artist DB Data [{2}/{3}]".format(len(dbData),len(artistMergeData[db]["MergeData"]),artistName,db))
+                        newMergeData[db] = {"ID": artistMergeData[db]["ID"], "MergeData": self.mergeDict(dbData, newMergeData[db]["MergeData"])}
+                        
+            self.manualMergers[artistName] = newMergeData
+            
+        if save:
+            self.saveData(local=False, fast=True)
+            self.setMergerMapping()
+            self.summary()

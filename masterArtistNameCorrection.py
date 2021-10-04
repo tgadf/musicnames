@@ -1,6 +1,9 @@
+from convertByteString import convertByteString
+
 class masterArtistNameCorrection:
-    def __init__(self):
-        self.debug = False
+    def __init__(self, debug=False):
+        self.debug = debug
+        self.cbs = convertByteString()
 
         ## Test
         assert self.clean("3/3") == "3-3"
@@ -67,6 +70,7 @@ class masterArtistNameCorrection:
         while x.startswith(".") and len(x) > 1:
             x = x[1:]
         x = x.strip()
+        x = self.cbs.convert(x)
         return x
 
     
@@ -78,10 +82,10 @@ class masterArtistNameCorrection:
         return x[:pos[0]-2].strip()  
         
         
-    def clean(self, name, debug=False):
-        if debug:
-            print("              Cleaning [{0}]".format(name))
+    def clean(self, name):
+        if self.debug:
+            print("Pre Cleaning  [{0}]".format(name))
         name = self.discConv(name)
-        if debug:
-            print("Post DiscConv Cleaning [{0}]".format(name))
+        if self.debug:
+            print("Post Cleaning [{0}]".format(name))
         return name

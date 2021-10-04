@@ -86,6 +86,7 @@ class masterArtistNameDB:
         ltype = {True: "Local", False: "Main"}
         ts = timestat("Saving Manual Renames Data To {0} {1} File".format(ltype[local], ftype[fast]))
         manualRenames = self.manualRenames if manualRenames is None else manualRenames
+        manualRenames = manualRenames.sort_values()
         self.summary(manualRenames)
         
         fname = self.getFilename(fast, local)
