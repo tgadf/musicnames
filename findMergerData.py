@@ -1,5 +1,5 @@
 from masterArtistMerger import masterArtistMerger
-from masterDBGate import musicDBs
+from masterDBGate import masterDBGate
 from timeUtils import timestat
 from ioUtils import getFile, saveFile
 from pandas import DataFrame
@@ -8,7 +8,7 @@ class findMergerData:
     def __init__(self, dbNameRefData=None):
         self.mam = masterArtistMerger()        
         
-        self.mDBs = musicDBs()
+        self.mDBs = masterDBGate()
         self.dbDiscs = self.mDBs.getDiscs()
         
         if dbNameRefData is None:

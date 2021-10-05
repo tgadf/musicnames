@@ -6,30 +6,11 @@ import sys
 from shutil import copyfile
 from setuptools.command.install import install
 
-        
-class InstallWrapper(install):
-
-  def run(self):
-    # Run this first so the install stops in case 
-    # these fail otherwise the Python package is
-    # successfully installed
-    self._copy_web_server_files()
-    # Run the standard PyPi copy
-    install.run(self)
-
-  def _copy_web_server_files(self):
-    ext = "yaml"
-    # Check to see we are running as a non-prv
-    targetFile = os.path.join(sys.prefix, 'musicnames', 'mainDBRenames.{0}'.format(ext))
-    localFile  = "mainDBRenames.{0}".format(ext)
-    print("===> Copying [{0}] to [{1}] to avoid overwritting the subsequent reverse copy".format(targetFile, localFile))
-    copyfile(src=targetFile, dst=localFile)
-    
 setup(
   name = 'musicnames',
   py_modules = ['masterArtistNameDB', 'masterArtistNameCorrection', 'masterArtistMerger', 'findMergerData'],
   version = '0.0.1',
-  data_files = [(os.path.join(sys.prefix, 'musicnames'), ['mainDBRenames.yaml'])],
+  data_files = [],
   description = 'A Python Wrapper for Musicnames Data',
   long_description = open('README.md').read(),
   author = 'Thomas Gadfort',

@@ -4,15 +4,15 @@ from fsUtils import isDir, isFile, setFile, setDir
 from ioUtils import getFile, saveFile
 from listUtils import getFlatList
 from timeUtils import timestat
-from masterDBGate import musicDBs
+from masterDBGate import masterDBGate
 from pandas import Series, DataFrame
 
 
 class mergerExpo:
     def __init__(self, debug=False):
               
-        self.mDBs = musicDBs()
-        self.dbDiscs = self.mDBs.getDiscs()
+        self.mDBGate = masterDBGate()
+        self.dbDiscs = self.mDBGate.getDiscs()
         self.expo = {"Discogs": 10, "AllMusic": 10, "MusicBrainz": 42, "LastFM": 14, "RateYourMusic": 10, 
                     "Deezer": 12, "AlbumOfTheYear": 9, "Genius": 11, "KWorbSpotify": 15, "KWorbiTunes": 15}
     
@@ -55,7 +55,7 @@ class masterArtistMerger:
         self.mergers = {}
         print("{0} masterArtistMerger {1}".format("="*25,"="*25))
         
-        self.mDBs = musicDBs()
+        self.mDBGate = masterDBGate()
 
         self.musicNamesDir = setDir(prefix, 'musicnames')
         if not isDir(self.musicNamesDir):
@@ -85,7 +85,7 @@ class masterArtistMerger:
     def setMergerMapping(self):
         ## For Getting All Mergers By DB
         dbMappingDF = self.manualMergers.apply(Series)
-        dbMapping   = {db: dbMappingDF[db] for db in self.mDBs.getDBs()}
+        dbMapping   = {db: dbMappingDF[db] for db in self.mDBGate.getDBs()}
         dbMapping   = {db: dbData[dbData.notna()] for db,dbData in dbMapping.items()}
         self.dbMapping = dbMapping
         
