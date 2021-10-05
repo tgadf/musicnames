@@ -1,6 +1,6 @@
 from sys import prefix
 from uuid import uuid4
-from fsUtils import isDir, isFile, setFile, setDir
+from fsUtils import isDir, isFile, setFile, setDir, mkDir
 from ioUtils import getFile, saveFile
 from listUtils import getFlatList
 from timeUtils import timestat
@@ -10,22 +10,17 @@ from pandas import Series, DataFrame
 
 class mergerExpo:
     def __init__(self, debug=False):
-              
-        self.mDBGate = masterDBGate()
-        self.dbDiscs = self.mDBGate.getDiscs()
         self.expo = {"Discogs": 10, "AllMusic": 10, "MusicBrainz": 42, "LastFM": 14, "RateYourMusic": 10, 
                     "Deezer": 12, "AlbumOfTheYear": 9, "Genius": 11, "KWorbSpotify": 15, "KWorbiTunes": 15}
     
-    
     def getExpo(self):
         return self.expo
-    
         
-    def findMergerPrefixExpo(self, init=False):
-        if init is False:
-            return 
+    def findMergerPrefixExpo(self):
+        ts = timestat("Finding Merger Prefix")        
         
-        ts = timestat("Finding Merger Prefix")
+        self.mDBGate = masterDBGate()
+        self.dbDiscs = self.mDBGate.getDiscs()
         
         basename = "IDToName"
         maxIDs   = {}
@@ -50,23 +45,31 @@ class mergerExpo:
     
 
 class masterArtistMerger:
-    def __init__(self, debug=False):
+    def __init__(self, install=False, debug=False):
         self.debug   = debug
         self.mergers = {}
         print("{0} masterArtistMerger {1}".format("="*25,"="*25))
         
-        self.mDBGate = masterDBGate()
-
         self.musicNamesDir = setDir(prefix, 'musicnames')
-        if not isDir(self.musicNamesDir):
-            raise ValueError("There is no master music names directory [{0}]".format(self.musicNamesDir))
-        
+        self.initializeData() if install is False else self.installData()
+
+    
+    def initializeData(self):
         mExpo = mergerExpo()
         self.prefixExpo = mExpo.getExpo()
         
         self.manualMergers = self.getData(fast=True, local=False)
         self.setMergerMapping()
         self.summary()
+        
+        
+    def installData(self):
+        if not isDir(self.musicNamesDir):
+            print("Install: Making Prefix Dir [{0}]".format(self.musicNamesDir))
+            mkDir(self.musicNamesDir)
+        if not isFile(self.getFilename(fast=True, local=False)):
+            print("Install: Creating Prefix Data From Local Data")
+            self.writeToMainPickleFromLocalYAML()
         
             
     def summary(self, manualMergers=None):
@@ -84,8 +87,9 @@ class masterArtistMerger:
     #########################################################################################################    
     def setMergerMapping(self):
         ## For Getting All Mergers By DB
+        mDBGate = masterDBGate()
         dbMappingDF = self.manualMergers.apply(Series)
-        dbMapping   = {db: dbMappingDF[db] for db in self.mDBGate.getDBs()}
+        dbMapping   = {db: dbMappingDF[db] for db in mDBGate.getDBs()}
         dbMapping   = {db: dbData[dbData.notna()] for db,dbData in dbMapping.items()}
         self.dbMapping = dbMapping
         

@@ -1,15 +1,23 @@
-from distutils.core import setup
-import setuptools
-import pkg_resources
-import os
-import sys
-from shutil import copyfile
+from setuptools import setup
 from setuptools.command.install import install
+from sys import prefix
+
+from masterArtistMerger import masterArtistMerger
+from masterArtistNameDB import masterArtistNameDB
+
+class PostInstallCommand(install):
+    def run(self):
+        install.run(self)
+        mam = masterArtistMerger(install=True)
+        mandb = masterArtistNameDB("main", install=True)
+        mandb = masterArtistNameDB("multi", install=True)
+        
 
 setup(
   name = 'musicnames',
   py_modules = ['masterArtistNameDB', 'masterArtistNameCorrection', 'masterArtistMerger', 'findMergerData'],
   version = '0.0.1',
+  cmdclass={'install': PostInstallCommand},    
   data_files = [],
   description = 'A Python Wrapper for Musicnames Data',
   long_description = open('README.md').read(),
@@ -29,4 +37,3 @@ setup(
   install_requires=['utils==0.0.1', 'multiartist==0.0.1', 'musicdb==0.0.1', 'matchAlbums==0.0.1', 'jupyter_contrib_nbextensions'],
   dependency_links=['git+ssh://git@github.com/tgadf/utils.git#egg=utils-0.0.1', 'git+ssh://git@github.com/tgadf/multiartist.git#egg=multiartist-0.0.1', 'git+ssh://git@github.com/tgadf/musicdb.git#egg=musicdb-0.0.1']
 )
- 

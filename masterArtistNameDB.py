@@ -1,20 +1,20 @@
 from ioUtils import getFile, saveFile
-from fsUtils import isDir, setDir, setFile
+from fsUtils import isDir, setDir, setFile, isFile, mkDir
 from timeUtils import timestat
 from pandas import Series
 from sys import prefix
 
 class masterArtistNameDB:
-    def __init__(self, source, debug=False, init=False):
+    def __init__(self, source, install=False, debug=False):
         self.debug = debug
         print("{0} masterArtistNameDB(\"{1}\") {2}".format("="*25,source,"="*25))
         self.debug  = debug
         self.source = source
-                
-        self.musicNamesDir = setDir(prefix, 'musicnames')
-        if not isDir(self.musicNamesDir):
-            raise ValueError("There is no music names directory [{0}]".format(self.musicNamesDir))
         
+        self.musicNamesDir = setDir(prefix, 'musicnames')
+        self.initializeData() if install is False else self.installData()
+    
+    def initializeData(self):
         self.manualRenames = self.getData(fast=True, local=False)
         retval,manualRenames  = self.duplicateIndexTest()
         if retval is False:
@@ -24,11 +24,19 @@ class masterArtistNameDB:
         if retval is False:
             raise ValueError("There are recursive key,values in the [{0}] data".format(self.source))
         self.summary()
-            
+        
+    def installData(self):
+        if not isDir(self.musicNamesDir):
+            print("Install: Making Prefix Dir [{0}]".format(self.musicNamesDir))
+            mkDir(self.musicNamesDir)
+        if not isFile(self.getFilename(fast=True, local=False)):
+            print("Install: Creating Prefix Data From Local Data")
+            self.writeToMainPickleFromLocalYAML()
+                        
     def summary(self, manualRenames=None):
         manualRenames = self.manualRenames if manualRenames is None else manualRenames
         print("masterArtistNameDB(\"{0}\") Summary:".format(self.source))
-        print("  Entries: {0}".format(manualRenames.shape[0]))
+        print("  Entries: {0}".format(len(manualRenames)))
         print("  Artists: {0}".format(manualRenames.nunique()))
 
             
@@ -86,12 +94,12 @@ class masterArtistNameDB:
         ltype = {True: "Local", False: "Main"}
         ts = timestat("Saving Manual Renames Data To {0} {1} File".format(ltype[local], ftype[fast]))
         manualRenames = self.manualRenames if manualRenames is None else manualRenames
-        manualRenames = manualRenames.sort_values()
-        self.summary(manualRenames)
+        #self.summary(manualRenames)
         
         fname = self.getFilename(fast, local)
         if fast:
             toSave = Series(manualRenames) if isinstance(manualRenames, dict) else manualRenames
+            toSave = toSave.sort_values()
         else:
             toSave = manualRenames.to_dict() if isinstance(manualRenames, Series) else manualRenames
         saveFile(idata=toSave, ifile=fname)
