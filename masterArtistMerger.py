@@ -221,6 +221,12 @@ class masterArtistMerger:
     def getMergerDataByDB(self, db):
         return self.dbMapping[db] if self.dbMapping.get(db) is not None else None
     
+    def getMergedIDsByDB(self, db):
+        return getFlatList([x["MergeData"].keys() for x in self.getMergerDataByDB(db).values])
+    
+    def getMergedIDs(self):
+        return getFlatList([self.getMergedIDsByDB(db) for db in self.dbMapping.keys()])
+    
     def getArtistDataByMergerID(self, mID):
         return self.mIDMapping[mID] if self.mIDMapping.get(mID) is not None else None
     

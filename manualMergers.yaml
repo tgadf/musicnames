@@ -579,9 +579,6 @@ Alice Cooper:
   LastFM:
     ID: '100028673715806'
     MergeData:
-      '29407030949':
-        ArtistName: Alice Cooper feat. Roger Glover
-        Ref: https://www.last.fm/music/Alice+Cooper+feat.+Roger+Glover/+albums?order=release_date
       '94953659984':
         ArtistName: Alice Cooper
         Ref: https://www.last.fm/music/Alice+Cooper/+albums?order=release_date
@@ -616,7 +613,7 @@ Alvino Rey:
       '299945':
         Name: Alvino Rey
         Ref: /artist/299945-Alvino-Rey
-André Kostelanetz:
+André Kostelanetz:
   Discogs:
     ID: '10005196639'
     MergeData:
@@ -823,7 +820,7 @@ Archie Shepp:
       '2632034':
         ArtistName: Archie Shepp Sextet
         Ref: /artist/2632034-Archie-Shepp-Sextet
-Ariel Camacho y Los Plebes del Rancho:
+Ariel Camacho:
   Deezer:
     ID: '1000855812545'
     MergeData:
@@ -891,7 +888,7 @@ Ariel Pink:
       '314952086267702590247814989786913750867':
         ArtistName: Ariel Pink's Haunted Graffiti
         Ref: /artist/4ac6c2fd-daad-4c31-b266-017c79d2e9a9
-Arnold Schoenberg:
+Arnold Schönberg:
   AlbumOfTheYear:
     ID: '1000319641'
     MergeData:
@@ -1649,7 +1646,7 @@ Banco del Mutuo Soccorso:
       0001217191:
         Name: Banco
         Ref: /artist/banco-mn0001217191/discography
-Banda Sinaloense MS de Sergio Lizárraga:
+Banda Sinaloense MS de Sergio Lizárraga:
   KWorbiTunes:
     ID: '1000339859843360'
     MergeData:
@@ -2524,6 +2521,16 @@ Bert Lown:
       '80850810050482816467940793917748742887':
         ArtistName: Bert Lown
         Ref: /artist/b6769019-d9e3-4dd8-8e43-9abf6be355af
+Béla Fleck & The Flecktones:
+  Deezer:
+    ID: '1000012829333'
+    MergeData:
+      '70538':
+        Name: Béla Fleck & The Flecktones
+        Ref: /us/artist/70538
+      '7119':
+        Name: Béla Fleck and the Flecktones
+        Ref: /us/artist/7119
 Big Bill Broonzy:
   AlbumOfTheYear:
     ID: '1000864109'
@@ -3038,7 +3045,7 @@ Billy Childish:
       '87407123313577228921539088205611572435':
         ArtistName: Billy Childish
         Ref: /artist/23ef9155-df05-4e3a-8109-acb603f3146d
-Billy Davis Jr.:
+Billy Davis Jr:
   Deezer:
     ID: '1000308921910'
     MergeData:
@@ -3263,7 +3270,7 @@ Billy Vera:
       '314427973967308005596404412272050994123':
         ArtistName: Billy Vera & The Contrasts
         Ref: /artist/a57cf041-a5cb-4eb8-875f-b9a5ec18c22d
-Bob B. Soxx & The Blue Jeans:
+Bob B. Soxx:
   Deezer:
     ID: '1000252500470'
     MergeData:
@@ -3483,7 +3490,7 @@ Bob Seger:
       '7900':
         ArtistName: Bob Seger
         Ref: https://rateyourmusic.com/artist/bob-seger
-Bob Wills & His Texas Playboys:
+Bob Wills:
   Deezer:
     ID: '1000081783801'
     MergeData:
@@ -4435,16 +4442,6 @@ Byron Lee:
       '72270610985070945122219415412354956220':
         ArtistName: Byron Lee And The Dragonaires
         Ref: /artist/58497b1c-e42b-48d3-8704-3eec017921c4
-Béla Fleck & The Flecktones:
-  Deezer:
-    ID: '1000012829333'
-    MergeData:
-      '70538':
-        Name: Béla Fleck & The Flecktones
-        Ref: /us/artist/70538
-      '7119':
-        Name: Béla Fleck and the Flecktones
-        Ref: /us/artist/7119
 C & K Vocal:
   LastFM:
     ID: '100065096556349'
@@ -4759,6 +4756,76 @@ Cem Karaca:
       '57787':
         ArtistName: Cem Karaca
         Ref: https://rateyourmusic.com/artist/cem_karaca
+César Franck:
+  AllMusic:
+    ID: '10009448777'
+    MergeData:
+      0000168874:
+        ArtistName: César Franck
+        Ref: /artist/c%C3%A9sar-franck-mn0000168874/credits
+      0002265580:
+        ArtistName: Trio César Franck
+        Ref: /artist/trio-c%C3%A9sar-franck-mn0002265580/discography
+      '0002674171':
+        ArtistName: Quatuor César Franck
+        Ref: /artist/quatuor-c%C3%A9sar-franck-mn0002674171/discography
+      0002873159:
+        ArtistName: César Franck Ensemble
+        Ref: /artist/c%C3%A9sar-franck-ensemble-mn0002873159/discography
+  Deezer:
+    ID: '1000704018339'
+    MergeData:
+      '11896753':
+        ArtistName: Lubomír Brabec, Golden Strings, Jitka Hosprová, Vladimír Popelka,
+          Franz Schubert, Johann Sebastian Bach, Antonio Vivaldi, Georges Bizet, Benvenuto
+          Terzi, GiuseppeGiordani, Jakub Jan Ryba, César Franck
+        Ref: /us/artist/11896753
+      '11896773':
+        ArtistName: Lubomír Brabec, César Franck, Golden Strings, Jitka Hosprová,
+          Vladimír Popelka
+        Ref: /us/artist/11896773
+      '11987822':
+        ArtistName: César Franck, Golden Strings, Vladimír Popelka, Felix Slováček
+        Ref: /us/artist/11987822
+      '1426965':
+        ArtistName: Trio César Franck
+        Ref: /us/artist/1426965
+      '15546':
+        ArtistName: César Franck
+        Ref: /us/artist/15546
+      '6644776':
+        ArtistName: César Franck Studio Orchestra
+        Ref: /us/artist/6644776
+  Discogs:
+    ID: '10003437775'
+    MergeData:
+      '4360999':
+        ArtistName: Trio César Franck
+        Ref: /artist/4360999-Trio-César-Franck
+      '5789265':
+        ArtistName: Quatuor César Franck
+        Ref: /artist/5789265-Quatuor-César-Franck
+      '6602635':
+        ArtistName: Ensemble César Franck
+        Ref: /artist/6602635-Ensemble-César-Franck
+      '832661':
+        ArtistName: César Franck
+        Ref: /artist/832661-César-Franck
+      '8763718':
+        ArtistName: Chorale César Franck
+        Ref: /artist/8763718-Chorale-César-Franck
+      '9682150':
+        ArtistName: César Franck-Duo
+        Ref: /artist/9682150-César-Franck-Duo
+  MusicBrainz:
+    ID: '1000163536125549150794255719443046927820219'
+    MergeData:
+      '22462649745898844974955973851490858227':
+        ArtistName: Ensemble César Franck
+        Ref: /artist/e9285775-8869-48f1-878b-1021cc7d58f2
+      '65012993996086142648737951303428131692':
+        ArtistName: César Franck
+        Ref: /artist/69802473-e361-4e15-bbd8-53fe83cd1587
 Charles Mingus:
   Deezer:
     ID: '1000930761096'
@@ -6603,76 +6670,6 @@ Count Basie:
       '3190':
         ArtistName: Count Basie
         Ref: https://rateyourmusic.com/artist/count-basie
-César Franck:
-  AllMusic:
-    ID: '10009448777'
-    MergeData:
-      0000168874:
-        ArtistName: César Franck
-        Ref: /artist/c%C3%A9sar-franck-mn0000168874/credits
-      0002265580:
-        ArtistName: Trio César Franck
-        Ref: /artist/trio-c%C3%A9sar-franck-mn0002265580/discography
-      '0002674171':
-        ArtistName: Quatuor César Franck
-        Ref: /artist/quatuor-c%C3%A9sar-franck-mn0002674171/discography
-      0002873159:
-        ArtistName: César Franck Ensemble
-        Ref: /artist/c%C3%A9sar-franck-ensemble-mn0002873159/discography
-  Deezer:
-    ID: '1000704018339'
-    MergeData:
-      '11896753':
-        ArtistName: Lubomír Brabec, Golden Strings, Jitka Hosprová, Vladimír Popelka,
-          Franz Schubert, Johann Sebastian Bach, Antonio Vivaldi, Georges Bizet, Benvenuto
-          Terzi, GiuseppeGiordani, Jakub Jan Ryba, César Franck
-        Ref: /us/artist/11896753
-      '11896773':
-        ArtistName: Lubomír Brabec, César Franck, Golden Strings, Jitka Hosprová,
-          Vladimír Popelka
-        Ref: /us/artist/11896773
-      '11987822':
-        ArtistName: César Franck, Golden Strings, Vladimír Popelka, Felix Slováček
-        Ref: /us/artist/11987822
-      '1426965':
-        ArtistName: Trio César Franck
-        Ref: /us/artist/1426965
-      '15546':
-        ArtistName: César Franck
-        Ref: /us/artist/15546
-      '6644776':
-        ArtistName: César Franck Studio Orchestra
-        Ref: /us/artist/6644776
-  Discogs:
-    ID: '10003437775'
-    MergeData:
-      '4360999':
-        ArtistName: Trio César Franck
-        Ref: /artist/4360999-Trio-César-Franck
-      '5789265':
-        ArtistName: Quatuor César Franck
-        Ref: /artist/5789265-Quatuor-César-Franck
-      '6602635':
-        ArtistName: Ensemble César Franck
-        Ref: /artist/6602635-Ensemble-César-Franck
-      '832661':
-        ArtistName: César Franck
-        Ref: /artist/832661-César-Franck
-      '8763718':
-        ArtistName: Chorale César Franck
-        Ref: /artist/8763718-Chorale-César-Franck
-      '9682150':
-        ArtistName: César Franck-Duo
-        Ref: /artist/9682150-César-Franck-Duo
-  MusicBrainz:
-    ID: '1000163536125549150794255719443046927820219'
-    MergeData:
-      '22462649745898844974955973851490858227':
-        ArtistName: Ensemble César Franck
-        Ref: /artist/e9285775-8869-48f1-878b-1021cc7d58f2
-      '65012993996086142648737951303428131692':
-        ArtistName: César Franck
-        Ref: /artist/69802473-e361-4e15-bbd8-53fe83cd1587
 D-Block Europe:
   Deezer:
     ID: '1000867398794'
@@ -6857,7 +6854,7 @@ Danny Ben-Israel:
       '81024077982':
         Name: Danny Ben-Israel
         Ref: https://www.last.fm/music/Danny+Ben-Israel/+albums?order=release_date
-Danny Burk and The Invaders:
+Danny Burk:
   LastFM:
     ID: '100056002009301'
     MergeData:
@@ -8715,7 +8712,7 @@ Edwin Hawkins:
       '210102951625801787093317044255580402590':
         ArtistName: The Edwin Hawkins' Singers
         Ref: /artist/a3d57b03-9fb7-4eee-9acd-17713803c553
-Einstürzende Neubauten:
+Einstürzende Neubauten:
   Deezer:
     ID: '1000112765436'
     MergeData:
@@ -9446,7 +9443,7 @@ Eric Clapton:
       '3668750':
         Name: Eric Clapton & Friends
         Ref: /artist/3668750-Eric-Clapton-Friends
-Erkey Grant and The Eerwigs:
+Erkey Grant:
   LastFM:
     ID: '100009500498389'
     MergeData:
@@ -11559,7 +11556,7 @@ Gil Evans:
       '0000554414':
         Name: Gil Evans Orchestra
         Ref: /artist/gil-evans-orchestra-mn0000554414/discography
-Gil Mellé:
+Gil Mellé:
   AllMusic:
     ID: '10003384869'
     MergeData:
@@ -12189,7 +12186,7 @@ Gregg Allman:
       '486745':
         Name: Gregg Allman
         Ref: /artist/486745-Gregg-Allman
-Grupo Montéz de Durango:
+Grupo Montéz de Durango:
   LastFM:
     ID: '100061987270011'
     MergeData:
@@ -12686,7 +12683,7 @@ Heavy D & The Boys:
       '448029':
         Name: Heavy D. & The Boyz
         Ref: /us/artist/448029
-Henri René:
+Henri René:
   AllMusic:
     ID: '10007635189'
     MergeData:
@@ -12985,7 +12982,7 @@ Herb Alpert:
       '30387':
         ArtistName: Herb Alpert
         Ref: https://rateyourmusic.com/artist/herb-alpert
-Herbert von Karajan:
+Herbert Von Karajan:
   Discogs:
     ID: '10003273029'
     MergeData:
@@ -13468,16 +13465,6 @@ Isley, Jasper, Isley:
       '71381':
         Name: Isley Jasper Isley
         Ref: /us/artist/71381
-J Roddy Walston & The Business:
-  Deezer:
-    ID: '1000658337777'
-    MergeData:
-      '113309':
-        Name: J Roddy Walston & The Business
-        Ref: /us/artist/113309
-      '5251658':
-        Name: J. Roddy Walston & The Business
-        Ref: /us/artist/5251658
 J. Frank Wilson:
   AllMusic:
     ID: '10006795901'
@@ -13515,6 +13502,16 @@ J. Frank Wilson:
       '89310090498000159802876281646804969828':
         Name: J. Frank Wilson
         Ref: /artist/a071b522-2766-4129-8cf8-3e60f6ef0bec
+J. Roddy Walston:
+  Deezer:
+    ID: '1000658337777'
+    MergeData:
+      '113309':
+        Name: J Roddy Walston & The Business
+        Ref: /us/artist/113309
+      '5251658':
+        Name: J. Roddy Walston & The Business
+        Ref: /us/artist/5251658
 J.J. Barrie:
   LastFM:
     ID: '100011413892087'
@@ -13954,7 +13951,7 @@ Jay & The Americans:
       '298927':
         Name: Jay and The Americans
         Ref: /us/artist/298927
-Jean‐Michel Jarre:
+Jean-Michel Jarre:
   LastFM:
     ID: '100096727387207'
     MergeData:
@@ -14612,7 +14609,7 @@ Jimmy Dorsey:
       '147307657733122686658781103774692929975':
         Name: Jimmy Dorsey & His Orchestra
         Ref: /artist/79b493ea-42ad-41a3-a729-11ccc1bd85e9
-Jimmy Gilmer & The Fireballs:
+Jimmy Gilmer:
   Deezer:
     ID: '1000391344621'
     MergeData:
@@ -15279,7 +15276,7 @@ John Coltrane:
       '337905533960584204833895909651331471661':
         ArtistName: John Coltrane Quintet
         Ref: /artist/2a784762-f782-4b7c-b2a5-a5941ac9d5dc
-John Davis And The Monster Orchestra:
+John Davis:
   Deezer:
     ID: '1000824783421'
     MergeData:
@@ -16069,7 +16066,7 @@ Johnny Otis:
       '65721754623840405155278611300811042007':
         ArtistName: Johnny Otis Congregation
         Ref: /artist/f8e0dca9-9454-4924-8a53-69e87c579c27
-Jonathan Richman:
+Jonathan Richman & The Modern Lovers:
   LastFM:
     ID: '100034618679107'
     MergeData:
@@ -16337,7 +16334,7 @@ Karen Clark-Sheard:
       '64377':
         Name: Karen Clark Sheard
         Ref: /us/artist/64377
-Karl Böhm:
+Karl Böhm:
   LastFM:
     ID: '100001948101466'
     MergeData:
@@ -17168,7 +17165,7 @@ Leonard Bernstein:
       '72124083116':
         ArtistName: 'Leonard Bernstein: New York Philharmonic Orchestra'
         Ref: https://www.last.fm/music/Leonard+Bernstein:+New+York+Philharmonic+Orchestra/+albums?order=release_date
-Leoš Janáček:
+Leoš Janáček:
   Deezer:
     ID: '1000876912102'
     MergeData:
@@ -18332,7 +18329,7 @@ Macklemore & Ryan Lewis:
       '8600041071':
         Name: Macklemore/Ryan Lewis
         Ref: https://www.last.fm/music/Macklemore%2FRyan+Lewis/+albums?order=release_date
-Malmö Symphony Orchestra:
+Malmö Symphony Orchestra:
   Deezer:
     ID: '1000011618834'
     MergeData:
@@ -18820,7 +18817,7 @@ Matthew Good:
       '1302':
         ArtistName: Matthew Good Band
         Ref: https://rateyourmusic.com/artist/matthew_good_band
-Max Gazzè:
+Max Gazzè:
   LastFM:
     ID: '100046545849927'
     MergeData:
@@ -19464,7 +19461,7 @@ Miles Davis:
       '70498722773942276620834357647442215885':
         Name: Miles Davis Quintet
         Ref: /artist/fe7245e7-d734-4ca1-8e26-691883f58201
-Miroslav Vitouš:
+Miroslav Vitouš:
   LastFM:
     ID: '100025508413533'
     MergeData:
@@ -20430,7 +20427,7 @@ New Philharmonia Orchestra:
       '704150':
         Name: New Philharmonia Orchestra
         Ref: /artist/704150-New-Philharmonia-Orchestra
-Niccolò Paganini:
+Niccolò Paganini:
   Deezer:
     ID: '1000695410077'
     MergeData:
@@ -20712,7 +20709,7 @@ Ollie & Jerry:
       '59945967238':
         Name: Ollie & Jerry
         Ref: https://www.last.fm/music/Ollie+&+Jerry/+albums?order=release_date
-Orchestre de l'Opéra Bastille:
+Orchestre de l'Opéra Bastille:
   Deezer:
     ID: '1000376019214'
     MergeData:
@@ -20860,7 +20857,7 @@ Pablo Vittar:
       '49373037951':
         Name: Pabllo Vittar
         Ref: https://www.last.fm/music/Pabllo+Vittar/+albums?order=release_date
-Paco de Lucía:
+Paco de Lucía:
   AllMusic:
     ID: '10007849231'
     MergeData:
@@ -21531,6 +21528,25 @@ Petra Frey:
       '191231':
         ArtistName: Petra Frey & Andreas
         Ref: https://rateyourmusic.com/artist/petra_frey_and_andreas
+Pérez Prado:
+  Discogs:
+    ID: '10000255413'
+    MergeData:
+      '392760':
+        Name: Perez Prado And His Orchestra
+        Ref: /artist/392760-Perez-Prado-And-His-Orchestra
+      '76111':
+        Name: Perez Prado
+        Ref: /artist/76111-Perez-Prado
+  MusicBrainz:
+    ID: '1000084735000186972000267217644161125638542'
+    MergeData:
+      '254219075517304145347924618938040114866':
+        Name: Pérez Prado
+        Ref: /artist/9b97150f-f131-4339-921e-8e5d8425f737
+      '93987825400499017988177309878171468626':
+        Name: Pérez Prado and His Orchestra
+        Ref: /artist/09c90630-b2b3-488f-97a2-06d41a85e8ac
 Philip Tabane:
   LastFM:
     ID: '100030616377304'
@@ -21800,25 +21816,6 @@ Prince Buster:
       '7445':
         ArtistName: Prince Buster
         Ref: https://rateyourmusic.com/artist/prince-buster
-Pérez Prado:
-  Discogs:
-    ID: '10000255413'
-    MergeData:
-      '392760':
-        Name: Perez Prado And His Orchestra
-        Ref: /artist/392760-Perez-Prado-And-His-Orchestra
-      '76111':
-        Name: Perez Prado
-        Ref: /artist/76111-Perez-Prado
-  MusicBrainz:
-    ID: '1000084735000186972000267217644161125638542'
-    MergeData:
-      '254219075517304145347924618938040114866':
-        Name: Pérez Prado
-        Ref: /artist/9b97150f-f131-4339-921e-8e5d8425f737
-      '93987825400499017988177309878171468626':
-        Name: Pérez Prado and His Orchestra
-        Ref: /artist/09c90630-b2b3-488f-97a2-06d41a85e8ac
 Quincy Jones:
   AllMusic:
     ID: '10006204963'
@@ -21908,7 +21905,7 @@ RANI:
       '40869228656247199971518089721961458691':
         Name: Rani
         Ref: /artist/46b08976-1ce5-46ec-abdc-fa88e3c0f5c5
-Rafael Kubelík:
+Rafael Kubelík:
   Deezer:
     ID: '1000334691310'
     MergeData:
@@ -22459,7 +22456,7 @@ Ray Parker Jr:
         Name: Ray Parker, Jr.
         Ref: /us/artist/70523
 Ray Vega: {}
-Raymond Lefèvre:
+Raymond Lefèvre:
   Deezer:
     ID: '1000791099621'
     MergeData:
@@ -23279,7 +23276,7 @@ Robert Plant:
       '2643646434927364562022183519989307089':
         ArtistName: Robert Plant Esq.
         Ref: /artist/6c160f11-04ce-4b52-b89a-3c90b2bd1db6
-Robyn Hitchcock and The Egyptians:
+Robyn Hitchcock:
   Deezer:
     ID: '1000170532464'
     MergeData:
@@ -23987,7 +23984,7 @@ Selena Gomez:
       '333365578298176522702076048807268528217':
         Name: Selena Gomez & The Scene
         Ref: /artist/37d0a847-32d3-480f-bd1e-101f50a3d332
-Señor Coconut:
+Señor Coconut:
   AllMusic:
     ID: '10001621524'
     MergeData:
@@ -24018,7 +24015,89 @@ Señor Coconut:
       '108481898952189750405779176904451421479':
         ArtistName: Señor Coconut
         Ref: /artist/ba07ae41-8e41-4411-bcf6-e37e4864d821
-Shadden and The King Lears:
+Sérgio Mendes:
+  AllMusic:
+    ID: '10007048243'
+    MergeData:
+      '0000002330':
+        ArtistName: Sérgio Mendes
+        Ref: /artist/sergio-mendes-mn0000002330/discography
+      '0000005056':
+        ArtistName: Sérgio Mendes & Brasil '66
+        Ref: /artist/sergio-mendes-brasil-66-mn0000005056/discography
+  Deezer:
+    ID: '1000902941161'
+    MergeData:
+      '134793':
+        ArtistName: The Sérgio Mendes Trio
+        Ref: /us/artist/134793
+      '4093':
+        ArtistName: Sérgio Mendes
+        Ref: /us/artist/4093
+      '5615':
+        ArtistName: Sérgio Mendes & Brasil '66
+        Ref: /us/artist/5615
+  Discogs:
+    ID: '10004707011'
+    MergeData:
+      '1237687':
+        ArtistName: Sérgio Mendes & Brasil '65
+        Ref: /artist/1237687-Sérgio-Mendes-Brasil-65
+      '215604':
+        ArtistName: Sérgio Mendes & Brasil '77
+        Ref: /artist/215604-Sérgio-Mendes-Brasil-77
+      '27986':
+        ArtistName: Sérgio Mendes
+        Ref: /artist/27986-Sérgio-Mendes
+      '300305':
+        ArtistName: Sérgio Mendes & The New Brasil '77
+        Ref: /artist/300305-Sérgio-Mendes-The-New-Brasil-77
+      '3112314':
+        ArtistName: The Sérgio Mendes Trio
+        Ref: /artist/3112314-The-Sérgio-Mendes-Trio
+      '58353':
+        ArtistName: Sérgio Mendes & Brasil '66
+        Ref: /artist/58353-Sérgio-Mendes-Brasil-66
+  LastFM:
+    ID: '100041494896976'
+    MergeData:
+      '20053850823':
+        ArtistName: Sérgio Mendes
+        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes/+albums?order=release_date
+      '3247804241':
+        ArtistName: Sérgio Mendes & Brasil '66
+        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+&+Brasil+%2766/+albums?order=release_date
+      '75943829594':
+        ArtistName: The Sérgio Mendes Trio
+        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+Trio/+albums?order=release_date
+      '81490119345':
+        ArtistName: Sérgio Mendes & Bossa Rio
+        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+&+Bossa+Rio/+albums?order=release_date
+      '93080107343':
+        ArtistName: Sérgio Mendes & Brasil '77
+        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+&+Brasil+%2777/+albums?order=release_date
+  MusicBrainz:
+    ID: '1000053968665467472575841457615929752462296'
+    MergeData:
+      '165503878784434416471011060598289973370':
+        ArtistName: The Sérgio Mendes Trio
+        Ref: /artist/818125a2-661f-4b0d-9d4b-6599235c27d3
+      '187145646357872565027849464616717309077':
+        ArtistName: Sérgio Mendes
+        Ref: /artist/6bf591c4-b050-478e-9d9f-167394d66c90
+      '257971185210675419557401559270927323569':
+        ArtistName: Sérgio Mendes & Brasil '77
+        Ref: /artist/0a6564fb-40e6-4f4e-9f90-b89778e0f3f1
+      '265696912502501592711562384106130478232':
+        ArtistName: Sérgio Mendes and The New Brasil '77
+        Ref: /artist/43e2c368-7574-47bf-860e-f6f7756bfc90
+      '304167655397803237993338660334525842305':
+        ArtistName: Sérgio Mendes & Brasil '66
+        Ref: /artist/491d8124-42e9-43f0-a828-e4a40c59e5ba
+      '97400699452739803521865693383469671625':
+        ArtistName: Sérgio Mendes & Brasil '65
+        Ref: /artist/85fef224-2542-44db-8d0b-2f2c23cc8f0a
+Shadden And The King Lears:
   LastFM:
     ID: '100035462741785'
     MergeData:
@@ -24079,7 +24158,7 @@ Simon Rattle:
       '8927340274':
         ArtistName: 'Simon Rattle: City Of Birmingham Symphony Orchestra'
         Ref: https://www.last.fm/music/Simon+Rattle:+City+Of+Birmingham+Symphony+Orchestra/+albums?order=release_date
-Sinéad O'Connor:
+Sinéad O'Connor:
   Deezer:
     ID: '1000510159718'
     MergeData:
@@ -25436,9 +25515,6 @@ Sun Ra:
   KWorbiTunes:
     ID: '1000109604521750'
     MergeData:
-      '15892134059':
-        ArtistName: Sun Rai
-        Ref: https://kworb.net/itunes/artist/15892134059.html
       '846477894406':
         ArtistName: Sun Ra Arkestra
         Ref: https://kworb.net/itunes/artist/846477894406.html
@@ -25502,88 +25578,16 @@ Sun Ra:
       '94040902591321660302226022578515284844':
         ArtistName: Sun Ra and His Arkestra With Chamber Orchestra
         Ref: /artist/51765aa9-dc82-4849-ac18-ab467df131d4
-Sérgio Mendes:
-  AllMusic:
-    ID: '10007048243'
-    MergeData:
-      '0000002330':
-        ArtistName: Sérgio Mendes
-        Ref: /artist/sergio-mendes-mn0000002330/discography
-      '0000005056':
-        ArtistName: Sérgio Mendes & Brasil '66
-        Ref: /artist/sergio-mendes-brasil-66-mn0000005056/discography
+T-Bone Burnett:
   Deezer:
-    ID: '1000902941161'
+    ID: '1000330412858'
     MergeData:
-      '134793':
-        ArtistName: The Sérgio Mendes Trio
-        Ref: /us/artist/134793
-      '4093':
-        ArtistName: Sérgio Mendes
-        Ref: /us/artist/4093
-      '5615':
-        ArtistName: Sérgio Mendes & Brasil '66
-        Ref: /us/artist/5615
-  Discogs:
-    ID: '10004707011'
-    MergeData:
-      '1237687':
-        ArtistName: Sérgio Mendes & Brasil '65
-        Ref: /artist/1237687-Sérgio-Mendes-Brasil-65
-      '215604':
-        ArtistName: Sérgio Mendes & Brasil '77
-        Ref: /artist/215604-Sérgio-Mendes-Brasil-77
-      '27986':
-        ArtistName: Sérgio Mendes
-        Ref: /artist/27986-Sérgio-Mendes
-      '300305':
-        ArtistName: Sérgio Mendes & The New Brasil '77
-        Ref: /artist/300305-Sérgio-Mendes-The-New-Brasil-77
-      '3112314':
-        ArtistName: The Sérgio Mendes Trio
-        Ref: /artist/3112314-The-Sérgio-Mendes-Trio
-      '58353':
-        ArtistName: Sérgio Mendes & Brasil '66
-        Ref: /artist/58353-Sérgio-Mendes-Brasil-66
-  LastFM:
-    ID: '100041494896976'
-    MergeData:
-      '20053850823':
-        ArtistName: Sérgio Mendes
-        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes/+albums?order=release_date
-      '3247804241':
-        ArtistName: Sérgio Mendes & Brasil '66
-        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+&+Brasil+%2766/+albums?order=release_date
-      '75943829594':
-        ArtistName: The Sérgio Mendes Trio
-        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+Trio/+albums?order=release_date
-      '81490119345':
-        ArtistName: Sérgio Mendes & Bossa Rio
-        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+&+Bossa+Rio/+albums?order=release_date
-      '93080107343':
-        ArtistName: Sérgio Mendes & Brasil '77
-        Ref: https://www.last.fm/music/S%C3%A9rgio+Mendes+&+Brasil+%2777/+albums?order=release_date
-  MusicBrainz:
-    ID: '1000053968665467472575841457615929752462296'
-    MergeData:
-      '165503878784434416471011060598289973370':
-        ArtistName: The Sérgio Mendes Trio
-        Ref: /artist/818125a2-661f-4b0d-9d4b-6599235c27d3
-      '187145646357872565027849464616717309077':
-        ArtistName: Sérgio Mendes
-        Ref: /artist/6bf591c4-b050-478e-9d9f-167394d66c90
-      '257971185210675419557401559270927323569':
-        ArtistName: Sérgio Mendes & Brasil '77
-        Ref: /artist/0a6564fb-40e6-4f4e-9f90-b89778e0f3f1
-      '265696912502501592711562384106130478232':
-        ArtistName: Sérgio Mendes and The New Brasil '77
-        Ref: /artist/43e2c368-7574-47bf-860e-f6f7756bfc90
-      '304167655397803237993338660334525842305':
-        ArtistName: Sérgio Mendes & Brasil '66
-        Ref: /artist/491d8124-42e9-43f0-a828-e4a40c59e5ba
-      '97400699452739803521865693383469671625':
-        ArtistName: Sérgio Mendes & Brasil '65
-        Ref: /artist/85fef224-2542-44db-8d0b-2f2c23cc8f0a
+      '166974':
+        Name: T Bone Burnett
+        Ref: /us/artist/166974
+      '72272':
+        Name: T-Bone Burnett
+        Ref: /us/artist/72272
 T. G. Sheppard:
   Deezer:
     ID: '1000533299361'
@@ -26796,6 +26800,16 @@ Three-6 Mafia:
       '291':
         Name: Three 6 Mafia
         Ref: /us/artist/291
+Tiësto:
+  AlbumOfTheYear:
+    ID: '1000968702'
+    MergeData:
+      '1160':
+        Name: Tiësto
+        Ref: https://www.albumoftheyear.org/artist/1160-tiesto/
+      '45728':
+        Name: Tiesto
+        Ref: https://www.albumoftheyear.org/artist/45728-tiesto/
 Tiny Grimes:
   AllMusic:
     ID: '10007564063'
@@ -26996,16 +27010,6 @@ Tito Puente:
       '99571726664080136796439245698655257298':
         ArtistName: Tito Puente's Golden Latin Jazz All Stars
         Ref: /artist/ddfa90be-8c12-44e9-9755-d34c3add88f4
-Tiësto:
-  AlbumOfTheYear:
-    ID: '1000968702'
-    MergeData:
-      '1160':
-        Name: Tiësto
-        Ref: https://www.albumoftheyear.org/artist/1160-tiesto/
-      '45728':
-        Name: Tiesto
-        Ref: https://www.albumoftheyear.org/artist/45728-tiesto/
 Tom Gerun:
   AllMusic:
     ID: '10002121932'
@@ -27429,16 +27433,6 @@ Turnpike Troubadours:
       '47541228233':
         Name: Turnpike Troubadours
         Ref: https://www.last.fm/music/Turnpike+Troubadours/+albums?order=release_date
-T‐Bone Burnett:
-  Deezer:
-    ID: '1000330412858'
-    MergeData:
-      '166974':
-        Name: T Bone Burnett
-        Ref: /us/artist/166974
-      '72272':
-        Name: T-Bone Burnett
-        Ref: /us/artist/72272
 U. Srinivas:
   AllMusic:
     ID: '10002544248'
@@ -27449,7 +27443,7 @@ U. Srinivas:
       0000808717:
         Name: U. Shrinivas
         Ref: /artist/u-shrinivas-mn0000808717/discography
-Ultraje À Rigor:
+Ultraje À Rigor:
   LastFM:
     ID: '100028822563755'
     MergeData:
@@ -27479,7 +27473,7 @@ Ustad Zia Mohiuddin Dagar:
       '90557674938':
         Name: Ustad Zia Mohiuddin Dagar
         Ref: https://www.last.fm/music/Ustad+Zia+Mohiuddin+Dagar/+albums?order=release_date
-Vasilis Papakonstadinou:
+Vasilis Papakonstantinou:
   AllMusic:
     ID: '10007958435'
     MergeData:
@@ -27578,7 +27572,7 @@ Vince Guaraldi:
       '329566636230980231676171918206060069172':
         Name: Vince Guaraldi
         Ref: /artist/05b5488d-7141-4b21-819b-d4713abf2a98
-Vũ Cát Tường:
+Vũ Cát Tường:
   LastFM:
     ID: '100020220414017'
     MergeData:
@@ -27709,7 +27703,7 @@ Wayne King:
       '881122':
         Name: Wayne King And His Orchestra
         Ref: /artist/881122-Wayne-King-And-His-Orchestra
-Werner Müller:
+Werner Müller:
   AllMusic:
     ID: '10003162410'
     MergeData:
@@ -28351,7 +28345,7 @@ Zac Brown:
       '47298833376948746913775174870347704456':
         ArtistName: Zac Brown Band
         Ref: /artist/507226f4-0842-4f43-950e-81a7017230ec
-Zaïko Langa Langa:
+Zaïko Langa Langa:
   LastFM:
     ID: '100014804327361'
     MergeData:
