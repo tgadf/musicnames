@@ -1,7 +1,7 @@
 from sys import prefix
 from uuid import uuid4
 from fsUtils import isDir, isFile, setFile, setDir, mkDir
-from ioUtils import getFile, saveFile
+from fileIO import fileIO
 from listUtils import getFlatList
 from timeUtils import timestat
 from masterDBGate import masterDBGate
@@ -12,6 +12,8 @@ class mergerExpo:
     def __init__(self, debug=False):
         self.expo = {"Discogs": 10, "AllMusic": 10, "MusicBrainz": 42, "LastFM": 14, "RateYourMusic": 10, 
                     "Deezer": 12, "AlbumOfTheYear": 9, "Genius": 11, "KWorbSpotify": 15, "KWorbiTunes": 15}
+        
+        self.io = fileIO()
     
     def getExpo(self):
         return self.expo
@@ -27,7 +29,7 @@ class mergerExpo:
         saveVal  = {}
         for db,dbDisc in self.dbDiscs.items():
             savename = setFile(dbDisc.getDiscogDBDir(), "Artist{0}PreMerge.p".format(basename))
-            maxIDs[db] = max([int(x) for x in getFile(savename).index if x is not None])
+            maxIDs[db] = max([int(x) for x in self.io.get(savename).index if x is not None])
 
         for db,maxID in maxIDs.items():
             exp = int(ceil(log10(maxID)))
@@ -49,7 +51,9 @@ class masterArtistMerger:
         self.debug   = debug
         self.mergers = {}
         print("{0} masterArtistMerger {1}".format("="*25,"="*25))
-        
+
+        self.io = fileIO()
+
         self.musicNamesDir = setDir(prefix, 'musicnames')
         self.initializeData() if install is False else self.installData()
 
@@ -170,7 +174,7 @@ class masterArtistMerger:
         ltype = {True: "Local", False: "Main"}
         ts = timestat("Getting Manual Mergers Data From {0} {1} File".format(ltype[local], ftype[fast]))
         fname = self.getFilename(fast, local)
-        manualMergers = getFile(fname)
+        manualMergers = self.io.get(fname)
 
         ts.stop()
     
@@ -201,7 +205,7 @@ class masterArtistMerger:
             toSave = toSave.sort_index()
         else:
             toSave = manualMergers.sort_index().to_dict() if isinstance(manualMergers, Series) else manualMergers
-        saveFile(idata=toSave, ifile=fname)
+        self.io.save(idata=toSave, ifile=fname)
         
         ts.stop()
 
