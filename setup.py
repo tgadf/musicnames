@@ -11,6 +11,7 @@ class PostInstallCommand(install):
         mam = masterArtistMerger(install=True)
         mandb = masterArtistNameDB("main", install=True)
         mandb = masterArtistNameDB("multi", install=True)
+        mandb = masterArtistNameDB("translation", install=True)
         
 
 setup(
